@@ -1,13 +1,14 @@
 // Sum of Two Numbers
 function sum(a, b) {
-  if(!isNaN(a) || !isNaN(b) ){
+  if(isNaN(a) || isNaN(b) ){
     console.log("Los datos de entrada no son adecuados")
     
   }else{
     let c = 0
     c= a+b 
-    return(c)
+    
     console.log(c)
+    return(c)
 
   }
  
@@ -16,13 +17,14 @@ function sum(a, b) {
 // Factorial of a Number
 function factorial(n) {
   let resul = 0
-  if(!isNaN(n)){
+  if(isNaN(n)){
     console.log("Los datos de entrada no son adecuados")
   }else{
     for(n;n=>1; n-- ){
       resul *= n
-      return(resul)
+      
       console.log(resul)
+      return(resul)
    }
 
   }
@@ -31,7 +33,7 @@ function factorial(n) {
 
 // Find the Largest Number
 function findLargest(arr) {
-  if(!Array.isArray(arr) || !isNaN(arr)){
+  if(!Array.isArray(arr) || isNaN(arr)){
     console.log("Los datos de entrada no son adecuados")
   }else{
     let mayor = arr[0];
@@ -71,7 +73,7 @@ function countVowels(str) {
 // Check if a Number is Prime
 function isPrime(n) {
   
-  if(!isNaN(n)){
+  if(isNaN(n)){
     console.log("Los datos de entrada no son adecuados")
   }else{
     if (number <= 1) {
