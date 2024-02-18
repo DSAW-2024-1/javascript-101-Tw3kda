@@ -16,59 +16,56 @@ function sum(a, b) {
 
 // Factorial of a Number
 function factorial(n) {
-  let resul = 0
+  let resul = 1
   if(isNaN(n)){
     console.log("Los datos de entrada no son adecuados")
   }else{
-    for(n;n=>1; n-- ){
+    for(n;n>1; n-- ){
       resul *= n
-      
-      console.log(resul)
-      return(resul)
    }
+    console.log(resul)
+    return(resul)
 
   }
+  
   
 }
 
 // Find the Largest Number
 function findLargest(arr) {
-  if(!Array.isArray(arr) || isNaN(arr)){
+  let mayor = arr[0]
+  if(!Array.isArray(arr) ){
     console.log("Los datos de entrada no son adecuados")
   }else{
-    let mayor = arr[0];
-    for(let i = 0; i < myArray.length; i++){
     
-    if(arr[i+1]>arr[i]){
-      mayor = arr[i+1]
+    for(let i = 1; i <= arr.length; i++){
+      if(arr[i]>mayor){
+        mayor = arr[i]
+      }
     }
+    console.log(mayor)
+    return(mayor)
   }
-  console.log(mayor)
-  return(mayor)
-
-  }
+  
   
 }
 
 // Count Vowels in a String
 function countVowels(str) {
-  if(typeof str != 'string'){
-    console.log("Los datos de entrada no son adecuados")
-  }else{
+  if (typeof str !== 'string') {
+    console.log("Los datos de entrada no son adecuados");
+  } else {
     let count = 0;
-  
     for (let char of str) {
-    if (vowels.includes(char)) {
-      count++;
+      if ('aeiouAEIOU'.includes(char)) {
+        count++;
+      }
     }
-    
-    }
+    console.log(count);  // Move this line before the return statement
     return count;
-    console.log(count)
-
   }
-  
 }
+
 
 // Check if a Number is Prime
 function isPrime(n) {
@@ -76,14 +73,14 @@ function isPrime(n) {
   if(isNaN(n)){
     console.log("Los datos de entrada no son adecuados")
   }else{
-    if (number <= 1) {
+    if (n <= 1) {
       return false;
     }
 
   
-  for (let i = 2; i <= Math.sqrt(number); i++) 
+  for (let i = 2; i <= Math.sqrt(n); i++) 
   {
-      if (number % i == 0) {
+      if (n % i == 0) {
           return false; 
       }
   }
